@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MarkSheet Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-body">
+              <div class="screen-body-item center">
+                  <p>ZAINAB HASSAN</p>
+                <!-- <p>CLASS 3<sup>rd</sup> TO 5<sup>th</sup></p> -->
+                <div class="app-title">
+                  <div class="animated infinite pulse">
+                    STUDENTS MARKSHEET
+                  </div>
+                </div>
+                <div class="name">
+                    <input type="text" class=" nameInput" placeholder="ENTER STUDENT NAME" id="stdName">
+                </div>
+              </div>
+              <div class="screen-body-item">
+                <form action="" method="post">
+                  <div class="app-form">
+                    <div class="app-form-group">ENGLISH
+                      <input type="text" class="app-form-control" placeholder="Enter Mark" id="eng" required>
+                    </div>
+                    <div class="app-form-group">MATHS
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="maths" required>
+                    </div>
+                     <div class="app-form-group">URDU
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="urdu" required>
+                    </div>
+                    <div class="app-form-group">G. SCIENCE
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="sci" required>
+                    </div>
+                    <div class="app-form-group">SINDHI
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="sindhi" required>
+                    </div>
+                    <div class="app-form-group">ISLAMIAT
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="isl" required>
+                    </div>
+                    <div class="app-form-group">SOCIAL STUDIES
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="sst" required>
+                    </div>
+                    <div class="app-form-group">COMPUTER
+                      <input  type="text"  class="app-form-control"   placeholder="Enter Mark" id="comp" required>
+                    </div>
+                    <div class="animated infinite pulse"> 
+                      <input type="button" name="" value="show Percentage" class="app-form-button" onclick="calculate()">
+                    </div>            
+                  </div>
+                </form>
+            </div>
+      
+          </div>
+            <div class="app-form-group showdata">
+                    <p id="showData" >  </p>
+
+                    <button class="refresh-button animated infinite pulse" type="button" onClick="refreshPage()">Refresh Page</button>
+                    <script>
+                        function refreshPage() {
+                            window.location.reload();
+                        } 
+                    </script>
+           </div>
+        </div>
+      </div>      
+      </div>
+      <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

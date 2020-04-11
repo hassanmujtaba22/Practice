@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COUNT DOWN</title>
+    <style>
+    body{
+        background-color: gray;
+    }
+    .countdowncontainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        background-color: #ddd;
+        border: 1px solid #999;
+        padding: 10px;
+        box-shadow: 0 0 5px 3px #ccc;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    .info{
+        font-size: 50px;
+    }
+    @media screen and (max-width: 360px){
+        body{
+        background-color: gray;
+    }
+    .countdowncontainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        background-color: #ddd;
+        border: 1px solid #999;
+        padding: 10px;
+        box-shadow: 0 0 5px 3px #ccc;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    .info{
+        font-size: 20px;
+    }
+    .infoo{
+        font-size: 10px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <table class="countdowncontainer">
+        <tr class="info">
+            <td colspan="4"><span>HASSAN MUJTABA'S</span><br> COUNTDOWN</td>
+        </tr>
+        <tr class="info">
+            <td id="days">365</td>
+            <td id="hours">24</td>
+            <td id="minutes">60</td>
+            <td id="seconds">60</td>
+        </tr>
+        <tr class="infoo">
+            <td>DAYS</td>
+            <td>HOURS</td>
+            <td>MINUTES</td>
+            <td>SECONDS</td>
+        </tr>
+    </table>
+
+
+    <script type="text/javascript">
+    function countdown(){
+        var now = new Date();
+        var eventDate = new Date(2020, 06, 22);
+
+        var currentTime = now.getTime();
+        var eventTime = eventDate.getTime();
+
+        var remainTime = eventTime - currentTime;
+
+        var s = Math.floor(remainTime / 1000);
+        var m = Math.floor(s / 60);
+        var h = Math.floor(m / 60);
+        var d = Math.floor(h / 24);
+
+        h %= 24;
+        m %= 60;
+        s %= 60;
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        document.getElementById("days").textContent = d;
+        document.getElementById("days").innerText = d;
+
+        document.getElementById("hours").textContent = d;
+        document.getElementById("minutes").textContent = m;
+        document.getElementById("seconds").textContent = s;
+    
+        setTimeout(countdown, 1000);
+    }
+    window.onload = countdown
+    </script>
+</body>
+</html>

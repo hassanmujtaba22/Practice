@@ -1,0 +1,56 @@
+.clock{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    font-size: 50px;
+}
+.point{
+    position: absolute;
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+}
+.number{ 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(var(--r)*1deg));
+}
+.N1{--r: 30;}.N2{--r: 60;}.N3{--r: 90;}.N4{--r: 120;}.N5{--r: 150;}
+.N6{--r: 180;}.N7{--r: 210;}.N8{--r: 240;}.N9{--r: 270;}.N10{--r: 300;}.N11{--r: 330;}.N12{--r: 360;}
+.set{
+    --r: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%)rotate(calc(var(--r)*1deg));
+    transform-origin: bottom;
+}
+.H{
+    width: 8px;
+    height: 30%;
+    background-color: black;
+    border-radius: 2px;
+    /* --r:30; */
+}
+.M{
+    width: 5px;
+    height: 38%;
+    background-color: blue;
+    border-radius: 2px;
+    /* --r:90; */
+}
+.S{
+    width: 2px;
+    height: 45%;
+    background-color: red;
+    /* --r:60; */
+}

@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.page{
+
+}
+.header{
+    height: 100vh;
+    background-image: url(./images/fabio-oyXis2kALVg-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.logo img{
+    width: 85px;
+    height: 55px;
+    padding: 10px 0 0 20px;
+    float: left;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+.menu ul{
+    list-style: none;
+    margin: 20px 0 0 300px;
+}
+.menu li{
+    display: inline-block;
+    margin-right: 25px;
+}
+.menu li:hover{
+    font-weight: bolder;
+    color: #0099FF;
+}
+.menu ul a li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #0099FF;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.menu ul a li:hover::after{
+    width: 100%;
+    color: #0099FF;
+}
+#btns{
+    margin-top: 45vh;
+    text-align: center;
+}
+#btn1{
+    margin-right: 50px;
+    width: 200px;
+    background-color: #0099FF;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: black 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+}
+#btn1:hover{
+    background-color: transparent;
+    color: white;
+}
+#btn2{
+    margin-right: 50px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: black 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+}
+#btn2:hover{
+    background-color: #0099FF;
+    color: black;
+}
+/* footer */
+footer{
+    width: 100%;
+    max-height: 100vh;
+    background-color: #202f39;
+}
+.footer-nav{
+    min-height: 100vh;
+    max-width: 20%;
+    float: left;
+}
+.footer-nav ul{
+    list-style: none;
+    padding: 25px;
+    margin-left: 50px;
+}
+.footer-nav ul h4{
+    color: cornsilk;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.footer-nav ul a{
+    color: cornsilk;
+    text-decoration: none;
+}
+.footer-nav ul a li{
+    text-transform: initial;
+    padding-bottom: 10px;
+}
+.footer-nav ul a li:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+.location{
+    max-height: 100vh;
+    max-width: 20%;
+    padding: 25px;
+    margin-left: 50px;
+    display: inline-block;
+    
+}
+.location h4{
+    color: cornsilk;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.location p{
+    color: cornsilk;
+    padding-bottom: 10px;
+}

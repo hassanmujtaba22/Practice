@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            height: 100vh;
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box2{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .text{
+            width: 30%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s all ease-in-out;
+        }
+        .text-appear{
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 3s all ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <a class="section1" href="#">Bring me Down</a>
+    </div>
+    <div class="box2">
+        <div class="text">
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sint asperiores, delectus deleniti corrupti pariatur explicabo veniam commodi mollitia eius a quaerat, maiores perferendis aut facilis fugiat ut aliquam esse?</p>
+        </div>
+        <a href="#" class="section2">Thanks</a>
+    </div>
+    
+    <script type="text/javascript">
+        function smoothScroll(target,duration){
+            var target = document.querySelector(target);
+            var targetPosition = target.getBoundingClientRect().top;
+            var startPosition = window.pageYOffset;
+            var distance = targetPosition - startPosition;
+            var startTime = null;
+            
+            function animation(currentTime){
+                if (startTime === null) startTime = currentTime;
+                var timeElapsed = currentTime - startTime;
+                var run = ease(timeElapsed,startPosition,distance,duration);
+                window.scroll(0,run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+            function ease(t,b,c,d){
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+
+        var section1 = document.querySelector(".section1");
+        var section2 = document.querySelector(".section2");
+
+        section1.addEventListener("click",function(){
+            smoothScroll(".section2", 5000)
+        })
+
+        section2.addEventListener("click",function(){
+            smoothScroll(".section1", 5000)
+        })
+
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+        function scrollAppear(){
+            var text = document.querySelector(".text");
+            var textPosition = text.getBoundingClientRect().top;
+            var screenPosition = window.innerHeight / 1.5;
+
+            if (textPosition < screenPosition){
+                text.classList.add('text-appear')
+            }
+        }
+        window.addEventListener("scroll",scrollAppear)
+        
+    </script>
+</body>
+</html>

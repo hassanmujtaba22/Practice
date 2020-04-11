@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-color: black;
+            color: rgb(4, 161, 223);
+        }
+        @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+        #MyClockDisplay{
+            font-size: 4em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-weight: bold;
+            border: 30px solid rgb(4, 161, 223);;
+            padding: 20px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="MyClockDisplay"></div>
+
+
+
+    <script>
+    function ShowTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM"
+
+        if (h === 0){
+            h = 12
+        }
+        if (h == 12){
+            session = "PM"
+        }
+        if (h > 12){
+            h = h - 12;
+            session = "PM"
+        }
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+
+        document.getElementById("MyClockDisplay").innerHTML = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+        
+        setInterval(ShowTime, 1000)
+    }
+    
+    ShowTime()
+    
+    </script>
+</body>
+</html>

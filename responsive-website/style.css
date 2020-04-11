@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.main{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./markus-spiske-p3wOH22WGKg-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.nev-bar{
+    display: flex;
+    padding: 40px 120px;
+}
+.nev-logo{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.nev-link{
+    flex: 1;
+}
+.nev-link ul{
+    margin-left: 50px;
+    display: inline;
+}
+.nev-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+.nev-link ul a{
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+.nev-link ul a li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: yellow;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nev-link ul a li:hover::after{
+    width: 100%;
+    color: yellow;
+}
+.btn{
+    background-color: yellow;
+    padding: 10px 20px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nev-link .btn{
+    float: right;
+}
+.tag-line{
+    margin: 80px 130px;
+    color: white;
+}
+.tag-line h1{
+    font-size: 65px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.tag-line span{
+    color: yellow;
+}
+.icon{
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.search-icon{
+    height: 60%;
+    width: 80px;
+}
+.search-icon .fa{
+    margin: 45px 23px;
+    color: white;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+}
+.search-icon .fa:hover{
+    color: yellow;
+}
+.media-icon{
+    background: yellow;
+    height: 35%;
+    width: 80px;
+    padding-top: 27%;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+}
+.media-icon .fa{
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.media-icon .fa:hover{
+    background-color: white;
+}
+.nev-bar .fa{
+    display: none;
+}
+
+
+
+
+@media (max-width: 700px){
+    .icon{
+        display: none;
+    }
+    .tag-line{
+        margin: 80px 40px;
+    }
+    .tag-line h1{
+        font-size: 50px;
+    }
+    .nev-link{
+        padding: 10px 30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nev-bar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nev-link{
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        background: black;
+        top: 0;
+        right: -2000px;
+        text-align: left;
+        z-index: 2;
+    }
+    .nev-link ul a{
+        display: block;
+    }
+    .nev-link .btn{
+        float: none;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+    .nev-logo h1{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,171 @@
+body {
+    background:#68dcff;
+    font-size: 12px;
+  }
+  
+  body, button, input {
+    font-family: 'Righteous', cursive;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  
+  .background {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: #3e3e3e;
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-body {
+    display: flex;
+  }
+  
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  .screen-body-item p{
+      color: white;
+  }
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .app-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #68dcff;
+    font-size: 26px;
+    text-transform: uppercase;
+    border-left: 4px solid #00b4eb;
+    padding: 10px;
+  }
+  .name{
+      padding-top: 100px;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+    color: #FFF;
+    font-size: 15px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+    /* margin-top: 20px; */
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: rgb(192, 192, 192);
+    font-size: 10px;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .nameInput {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .nameInput::placeholder {
+    color: #FFF;
+    font-size: 15px;
+  }
+  
+  .nameInput:focus {
+    border-bottom-color: #ddd;
+  }
+
+
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #68dcff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+  }
+  
+  .app-form-button:hover {
+    color: #00b4eb;
+  }
+  
+  .showdata{
+    text-align: left;
+    padding-left: 50px;
+    color: #00b4eb;
+    font-size: 1.2rem;
+    padding-top: -10px;
+    padding-bottom: 10px;
+  }
+  .refresh-button{
+      color: white;
+      background-color: #00b4eb;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 30px;
+  }
+  .refresh-button:hover{
+    color: #3e3e3e;
+    background-color: #68dcff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
