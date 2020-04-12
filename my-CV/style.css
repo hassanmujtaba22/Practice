@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+}
+img{
+    width: 100px;
+}
+h3,h6{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h6{
+    font-size: 16px;
+}
+p, li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+ul li{
+    list-style: none;
+}
+
+.container{
+    background-color: rgb(236, 236, 236);
+    margin: 0 auto;
+    width: 90%;
+    padding: 50px;
+    border: 10px solid black;
+}
+header{
+    width: 100%;
+    margin-bottom: 20px;
+}
+header h1{
+    font-weight: bolder;
+    font-size: 50px;
+}
+header h2{
+    font-weight: bolder;
+    font-size: 25px;
+}
+.head{
+    float: left;
+}
+header img{
+    margin-left: 200px;
+}
+
+#address span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.inside-container{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.inside-container h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+.inside-container ul li span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+#skill ul li{
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 600px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1, h2{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-weight: bold;
+    }
+    img{
+        width: 50px;
+    }
+    h3,h6{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h6{
+        font-size: 11px;
+    }
+    p, li{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+    }
+    ul li{
+        list-style: none;
+    }
+    
+    .container{
+        background-color: rgb(236, 236, 236);
+        margin: 0 auto;
+        width: 90%;
+        padding: 50px;
+        border: 10px solid black;
+    }
+    header{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    header h1{
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    header h2{
+        font-weight: bolder;
+        font-size: 15px;
+    }
+    .head{
+        float: left;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    
+    #address span{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .inside-container{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .inside-container h3{
+        font-size: 15px;
+        margin-bottom: 2px;
+        text-decoration: underline;
+    }
+    .inside-container ul li span{
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    #skill ul li{
+        list-style: decimal;
+        margin-left: 20px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 400px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h1, h2{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-weight: bold;
+    }
+    img{
+        width: 50px;
+    }
+    h3,h6{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h6{
+        font-size: 10px;
+    }
+    p, li{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 8px;
+    }
+    ul li{
+        list-style: none;
+    }
+    
+    .container{
+        background-color: rgb(236, 236, 236);
+        margin: 0 auto;
+        width: 90%;
+        padding: 30px;
+        border: 2px solid black;
+    }
+    header{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    header h1{
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    header h2{
+        font-weight: bolder;
+        font-size: 10px;
+    }
+    .head{
+        float: left;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    
+    #address span{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .inside-container{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .inside-container h3{
+        font-size: 9px;
+        margin-bottom: 2px;
+        text-decoration: underline;
+    }
+    .inside-container ul li span{
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    #skill ul li{
+        list-style: decimal;
+        margin-left: 20px;
+    }
+    
+}
