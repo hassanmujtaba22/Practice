@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" href="./websiteImages/logo.png" type="image/gif" sizes="16x16">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+    <style>
+        .circularBar{
+            margin-top: 180px;
+            text-align: center;
+        }
+        .circularBar .round{
+            min-height: 255px;
+            margin-top: 30px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .circularBar .round strong{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            transform: translate(-50%);
+            font-size: 40px;
+            color: #212121;
+            font-weight: 100;
+        }
+        .circularBar span{
+            display: block;
+            color: #999;
+            font-size: 17px;
+            margin-top: 10px;
+        }
+        .circularBar span i{
+            color: #ff5cff;
+            font-size: 22px;
+            margin-right: 7px;
+        }
+        section button:hover{
+            background-color: #ff5cff;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="circularBar">
+        <h1>CIRCLE PROGRESS BAR</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="round" data-value="0.87" data-size="200" data-thickness="12">
+                        <strong></strong>
+                        <span><i class="fab fa-html5"></i>
+                        HTML
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="round" data-value="0.95" data-size="200" data-thickness="12">
+                        <strong></strong>
+                        <span><i class="fab fa-css3"></i>
+                        CSS
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="round" data-value="0.99" data-size="200" data-thickness="12">
+                        <strong></strong>
+                        <span><i class="fab fa-js-square"></i>
+                        JS
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn" onclick='Circle(".round")'>Refresh</button>
+    </section>
+
+
+
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
